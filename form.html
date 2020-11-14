@@ -43,16 +43,15 @@
     $('.userid').next().show();
         }
 
-            data=$('.password').val();
-            var len=data.length;
-        if(len<1)
+         var data=$('.nomer').val();
+        if(validate_phoneno(data))
         {
-    $('.password').next().show();
+    $('.nomer').next().hide();
         }
         else
         {
-    $('.password').next().hide();
-        }
+    $('.nomer').next().show();
+        } 
 
             data=$('.emailadd').val();
         if(valid_email(data))
@@ -137,11 +136,18 @@
         var pattern= new RegExp(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/);
          return pattern.test(email);
         }
+
         function validate_userid(uid)
         {
          var pattern= new RegExp(/^[a-z0-9_]+$/);
          return pattern.test(uid);
         }
+
+        function validate_phoneno(ph)
+        {
+         var pattern=new RegExp(/^[0-9-+]+$/);
+         return pattern.test(ph);
+        } 
 
 </script>
 
@@ -153,40 +159,40 @@
 
         <div> <span class="label">Nama Pelanggan <br> </span><input type="text" class="userid" name="userid"
             /><span class="error"> Hanya bisa diisi angka, huruf, dan _(underscore)</span></div>
-    
-            <div><span class="label">Password <br> </span><input type="password" class="password"
-            name="password" /><span class="error"> Password cannot be blank</span></div>
-    
-            <div><span class="label">Email <br> </span><input type="text" class="emailadd"
+
+        <div><span class="label">Nomer Telepon <br> </span><input type="text" class="nomer"
+            name="nomer" /><span class="error"> Hanya bisa diisi angka, +, dan - </span></div>
+
+        <div><span class="label">Email <br> </span><input type="text" class="emailadd"
             name="emailid" /><span class="error"> Email tidak valid</span></div>
 
-            <div><span class="label">Alamat Rumah <br> </span><input type="text" class="rumah"
-                name="rumah" /><span class="error"> Alamat rumah tidak boleh kosong</span></div>
+        <div><span class="label">Alamat Rumah <br> </span><input type="text" class="rumah"
+                name="rumah" /><span class="error"> Alamat rumah diisi dengan benar dan lengkap</span></div>
 
-            <div><span class="label">Pilihan Service </span><br><input type="checkbox" id="pizza"
+        <div><span class="label">Pilihan Service </span><br><input type="checkbox" id="pizza"
                     name="pizza" value=6 class="chkb"> Cuci Ac $6 <br>
-                <input type="checkbox" id="hotdog" name="hotdog" value=4 class="chkb"> Tambah freon $4<br>
-                <input type="checkbox" id="coke" name="coke" value=8 class="chkb"> Bongkar pasang $8<br>
-                <input type="checkbox" id="fries" name="fries" value=10 class="chkb"> Full Service (cek semua) $12<br>
+            <input type="checkbox" id="hotdog" name="hotdog" value=4 class="chkb"> Tambah freon $4<br>
+            <input type="checkbox" id="coke" name="coke" value=8 class="chkb"> Bongkar pasang $8<br>
+            <input type="checkbox" id="fries" name="fries" value=10 class="chkb"> Full Service (cek semua) $12<br>
                 <span class="fooderror">Anda belum memilih pilihan service apapun</span></div>
             
-            <div><span class="label">Pembayaran</span><br><input type="radio" name="paymode"
+        <div><span class="label">Pembayaran</span><br><input type="radio" name="paymode"
                     class="radiobtn" value="MasterCard"> Transfer Bank <br>
-                <input type="radio" name="paymode" class="radiobtn" value="ANZ Grindlay Card"> Dompet Digital<br>
-                <input type="radio" name="paymode" class="radiobtn" value="Visa Card"> Bayar di tempat<br>
-                <span class="payerror">Anda belum memilih metode pembayaran apapun</span></div>
+            <input type="radio" name="paymode" class="radiobtn" value="ANZ Grindlay Card"> Dompet Digital<br>
+            <input type="radio" name="paymode" class="radiobtn" value="Visa Card"> Bayar di tempat<br>
+            <span class="payerror">Anda belum memilih metode pembayaran apapun</span></div>
             
-            <div><span class="label">Ukuran Ac </span><select id="country" class="infobox">
-                <option value="0">Pilih</option>
-                <option value="USA">0.5 PK</option>
-                <option value="United Kingdom">0.75 PK</option>
-                <option value="India">1 PK</option>
-                <option value="China">> 1 PK</option>
+        <div><span class="label">Ukuran Ac </span><select id="country" class="infobox">
+            <option value="0">Pilih</option>
+            <option value="USA">0.5 PK</option>
+            <option value="United Kingdom">0.75 PK</option>
+            <option value="India">1 PK</option>
+            <option value="China">> 1 PK</option>
                 </select> 
             
-                <span class="error"> Silahkan isi ukuran Ac </span></div>
-            
-                <div><span class="label">Tanggal <br> </span><input type="date" class="tgl"
+            <span class="error"> Silahkan pilih ukuran Ac </span></div>
+        
+        <div><span class="label">Tanggal <br> </span><input type="date" class="tgl"
                     name="tgl" /><span class="error"> Tanggal tidak boleh kosong</span></div>
 
             <input class="submit" type="submit" value="Submit"> 
