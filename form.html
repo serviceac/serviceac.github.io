@@ -4,11 +4,31 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <title>Form Permintaan Service Ac</title>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -153,8 +173,48 @@
 
 </head>
 <body>
-    <form>
 
+    <header>
+        <!-- header inner -->
+        <div class="header">
+           <div class="container">
+              <h1 style="color:white;"> Service ac Indonesia</h1>
+              <div class="row">
+                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                    <div class="full">
+                       <div class="center-desk">
+                          <div class="logo"> <a href="index.html"><img src="images/gambarheader.jpg" alt="#"></a> </div> <!--Sumber gambar : https://www.99.co/blog/indonesia/daftar-harga-servis-ac/-->
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                    <div class="menu-area">
+                       <div class="limit-box">
+                          <nav class="main-menu">
+                             <ul class="menu-area-main">
+                                <li class="active"> <a href="index.html">Home</a> </li>
+                                <li> <a href="about.html">About us</a> </li>
+                                <li><a href="product.html">Our Product</a></li>
+                                <li><a href="library.html">Library</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="form.html">Form Permintaan</a></li>
+                                
+                     <!--           <li class="mean-last"> <a href="#"><img src="images/search_icon.png" alt="#" /></a> </li>
+                                <li class="mean-last"> <a href="#"><img src="images/top-icon.png" alt="#" /></a> </li>          -->
+                             </ul>
+                          </nav>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        
+        <!-- end header inner -->
+     </header>
+
+    <form>
+        <p><br><br><br><br><br><br><br><br><br><br><br></p>
         <h1 style="color:black;">FORMULIR PERMINTAAN</h1>
 
         <div> <span class="label">Nama Pelanggan <br> </span><input type="text" class="userid" name="userid"
@@ -182,7 +242,7 @@
             <input type="radio" name="paymode" class="radiobtn" value="Visa Card"> Bayar di tempat<br>
             <span class="payerror">Anda belum memilih metode pembayaran apapun</span></div>
             
-        <div><span class="label">Ukuran Ac </span><select id="country" class="infobox">
+        <div><span class="label">Ukuran Ac <br> </span><select id="country" class="infobox">
             <option value="0">Pilih</option>
             <option value="USA">0.5 PK</option>
             <option value="United Kingdom">0.75 PK</option>
@@ -195,7 +255,42 @@
         <div><span class="label">Tanggal <br> </span><input type="date" class="tgl"
                     name="tgl" /><span class="error"> Tanggal tidak boleh kosong</span></div>
 
-            <input class="submit" type="submit" value="Submit"> 
+         <p>   <input class="submit" type="submit" value="Submit" > <br>    </p>
     </form>
+
+
+    <footer>
+        <div class="footer">
+           <div class="container">
+              <div class="row pdn-top-30">
+                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="Follow">
+                       <h3>Ikuti Media Sosial Kami</h3>
+                    </div>
+                    <ul class="location_icon">
+                       <li> <a href="#"><img src="icon/facebook.png"></a></li>
+                       <li> <a href="#"><img src="icon/Twitter.png"></a></li>
+                       <li> <a href="#"><img src="icon/linkedin.png"></a></li>
+                       <li> <a href="#"><img src="icon/instagram.png"></a></li>
+                    </ul>
+                 </div>
+                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                    <div class="Follow">
+                       <h3>Kritik dan Saran</h3>
+                    </div>
+                    <input class="Newsletter" placeholder="Saran saya..." type="Saran saya...">
+                    <button class="Subscribe">Kirim</button>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="copyright">
+           <div class="container">
+              <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a></p>
+           </div>
+        </div>
+     </footer>
+
+
 </body>
 </html>
